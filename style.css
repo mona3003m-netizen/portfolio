@@ -1,0 +1,148 @@
+/* ألوان أساسية */
+:root {
+    --bg-color: #0a318d;
+    --card-bg: #ffffff;
+    --text-main: #05080f;
+    --primary: #ff0077;
+    --accent: #6a2b5b;
+}
+
+/* خلفية عامة */
+body {
+    background: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    padding: 30px;
+}
+
+/* الحاوية */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* الهيدر */
+header {
+    background: linear-gradient(135deg, #ffffff, #d6d6ff);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeDown 1s forwards;
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+header p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* الأقسام */
+section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* المهارات */
+.tag {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin: 5px 0;
+
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popIn 0.6s forwards;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tag:nth-child(1) { animation-delay: 0.2s; }
+.tag:nth-child(2) { animation-delay: 0.4s; }
+.tag:nth-child(3) { animation-delay: 0.6s; }
+.tag:nth-child(4) { animation-delay: 0.8s; }
+.tag:nth-child(5) { animation-delay: 1s; }
+
+/* عناصر الخبرات */
+.exp-item {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideIn 0.7s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* الروابط */
+a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    opacity: 0;
+    animation: fadeUp 1.5s forwards;
+}
